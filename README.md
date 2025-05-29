@@ -170,8 +170,7 @@ Default Output Format (Use “json”)
 
 Interacting with AWS using your CLI:
 
-
-	You could now perform all of the steps that you performed under the “Building your VPC” section using commands, ex:
+You could now perform all of the steps that you performed under the “Building your VPC” section using commands, ex:
 
 Create VPC:
 
