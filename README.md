@@ -1,4 +1,4 @@
-## Custom AWS VPC Network from Scratch (Manual CLI Setup + Diagram)
+# Custom AWS VPC Network from Scratch (Manual CLI Setup + Diagram)
 
 ## Project Overview:
 
@@ -11,24 +11,21 @@ An AWS VPC complete with step-by-step instructions on the cost/budget management
 
 ## Step-by-Step Setup
 
+### Prerequisites 
 
-## Post Project Reflection
+Download and install Windows subsystem for Linux 
 
-    Prerequisites 
+https://learn.microsoft.com/en-us/windows/wsl/install
 
-    Download and install Windows subsystem for Linux 
+Create an AWS account
 
-    https://learn.microsoft.com/en-us/windows/wsl/install
+https://aws.amazon.com/free
 
-    Create an AWS account
+(You will have to attach a credit card, even though you’re going to stick to free services. Using Search / AI to verify which services are free and which are paid can be your friend).
 
-    https://aws.amazon.com/free
+Create a document to store key information
 
-    (You will have to attach a credit card, even though you’re going to stick to free services. Using Search / AI to verify which services are free and which are paid can be your friend).
-
-    Create a document to store key information
-
-    You’re going to be making various commands that will require specific identifiers, and you’ll want this information handy. If you’re comfortable navigating the AWS console by yourself that can work, but the fastest way is to simply aggregate the information and stick it all somewhere that you can easily grab it from, e.g. 
+You’re going to be making various commands that will require specific identifiers, and you’ll want this information handy. If you’re comfortable navigating the AWS console by yourself that can work, but the fastest way is to simply aggregate the information and stick it all somewhere that you can easily grab it from, e.g. 
 
 vpc name/id :
 
@@ -59,7 +56,7 @@ key pair name:
 
 key-pair-xx
 
-Building your VPC
+### Building your VPC
 
 Once you’ve installed Windows Subsystem for Linux and created your AWS account, it’s time to sign-in to the AWS console.
 
@@ -75,44 +72,49 @@ No tags are required.
 
 Congratulations, you’ve built your VPC. Now we’ll segment the network using subnets. 
 
-Create Subnets
-	Subnet 1:
+### Create Subnets
+	
+1) Subnet 1:
+
 Subnet Name: public-subnet-01 (or whatever matches your naming scheme)
 Availability Zone: select any from the list
 CIDR Block: 10.0.1.0/24
 Left-click “Create Subnet”
 
-		Subnet 2: 
+2) Subnet 2: 
+
 Subnet Name: private-subnet-01 (or whatever matches your naming scheme)
 Availability Zone: select any from the list
 CIDR Block: 10.0.2.0/24
 Left-click “Create Subnet”
 
-With the subnets created, you’re not ready to add route tables.
+With the subnets created, you’re now ready to add route tables.
 
-    3) Create an Internet Gateway
+3) Create an Internet Gateway
+
 Navigate to Internet Gateways
 Select “Create Internet Gateway”
 Name the gateway based on your naming scheme
 Attach the gateway to your VPC
 
-    4) Create Route Tables
-	Creating the Table:
+4) Create Route Tables
+
+Creating the Table:
 Select “Route tables” in the navigation bar
 Press “Create Route Table”
 Name it “my-route-table-01” (or whatever matches your naming scheme)
 Press “Create”
 
-		Add a route for your public subnet:
+Add a route for your public subnet:
 In the Route Tables tab, select the route table you just created.
 Select “Routes” -> “Edit routes” -> “Add route” 
 Add 0.0.0.0 to add your internet gateway
 
-	Attach routing table to your public subnet:
+Attach routing table to your public subnet:
 Select the route table -> Subnet Associations -> Edit subnet associations.
 Check the Public-Subnet and save.
 	
-Interacting with your VPC using the Linux CLI
+### Interacting with your VPC using the Linux CLI
 
 Once you have installed the Windows Subsystem for Linux, you should have a command line interface tool that will appear to you as “Ubuntu”
 
@@ -150,10 +152,9 @@ Create an Access Key Pair within your AWS account using the AWS console
 
 10) Copy or download the Access Key ID and Secret Access Key — you’ll only see the secret key once.
 
-Configuring your CLI
+### Configuring your CLI
 
 In the Ubuntu CLI:
-
 
 Type “aws configure” 
 
@@ -172,7 +173,7 @@ Interacting with AWS using your CLI:
 
 	You could now perform all of the steps that you performed under the “Building your VPC” section using commands, ex:
 
-	Create VPC:
+Create VPC:
 
 	aws ec2 create-vpc --cidr-block 10.0.0.0/16 --region us-west-2
 
@@ -180,11 +181,11 @@ Interacting with AWS using your CLI:
 
 	aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.1.0/24 --availability-zone us-west-2a
 
-	Create a private Subnet:
+Create a private Subnet:
 
 aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.2.0/24 --availability-zone us-west-2b
 
-	Create and Attach an Internet Gateway:
+Create and Attach an Internet Gateway:
 
 aws ec2 create-internet-gateway
 aws ec2 attach-internet-gateway --vpc-id vpc-xxxxxx --internet-gateway-id igw-xxxxxx
@@ -409,7 +410,8 @@ Billing / Budget
 
 Billing and Cost Management and Budget tools were utilized to avoid and monitor for any charges due to potential human error.
 
-## Post-exercise reflection
+## Post Project Reflection
+
 Setting up the VPC manually for the first time was surprisingly quick and straightforward. The entire process—from initial setup to gaining a working SSH connection into the EC2 instance was very easy when compared to setting up communication via documentation and diagrams.
 
 While working alongside an AI LLM provided valuable support, it also introduced a challenge: keeping track of the many back-and-forth prompts and instructions. Ensuring coherence in the workflow required extra effort, especially as the process stretched across multiple working sessions. There are also hurdles in terms of finding the balance of utilizing the LLM to assist in productivity, while still maintaining a genuine understanding of the process.
