@@ -7,6 +7,8 @@ An AWS VPC complete with step-by-step instructions on the cost/budget management
 ## Architecture Diagram
 
 [VPC Architecture Text Diagram](./images/vpc-text-diagram.png)
+
+
 [VPC Architecture Visual Diagram](./images/vpc-visual-diagram.png)
 
 ## Step-by-Step Setup
