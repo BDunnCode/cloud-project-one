@@ -1,29 +1,29 @@
 # Custom AWS VPC Network from Scratch (Manual CLI Setup + Diagram)
 
-## Project Overview:
+## Project Overview
 
 An AWS VPC complete with step-by-step instructions on the cost/budget management and building out process of public and private subnets, routing tables, security groups, and a NAT instance to mask the IPs of sensitive hosts in the private subnet when they communicate with the public internet.
 
 ## Architecture Diagram
 
-[!VPC Architecture](./images/vpc-text-diagram.png)
-[!VPC Architecture](./images/vpc-visual-diagram.png)
+[VPC Architecture Text Diagram](./images/vpc-text-diagram.png)
+[VPC Architecture Visual Diagram](./images/vpc-visual-diagram.png)
 
 ## Step-by-Step Setup
 
 ### Prerequisites 
 
-Download and install Windows subsystem for Linux 
+-Download and install Windows subsystem for Linux 
 
 https://learn.microsoft.com/en-us/windows/wsl/install
 
-Create an AWS account
+-Create an AWS account
 
 https://aws.amazon.com/free
 
 (You will have to attach a credit card, even though you’re going to stick to free services. Using Search / AI to verify which services are free and which are paid can be your friend).
 
-Create a document to store key information
+-Create a document to store key information
 
 You’re going to be making various commands that will require specific identifiers, and you’ll want this information handy. If you’re comfortable navigating the AWS console by yourself that can work, but the fastest way is to simply aggregate the information and stick it all somewhere that you can easily grab it from, e.g. 
 
