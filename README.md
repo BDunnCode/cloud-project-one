@@ -31,34 +31,33 @@ Log and store:
 
     - Key pair name
 
-See Example Scheme: (input your own names and IDs in place of 123
-, 123456789):
+See Example Scheme: (input your own names and IDs in place of 123, 123456789):
 
-vpc name/id :
+    **vpc name/id** :
 
-my-vpc-123 | vpc-123456789
+    my-vpc-123 | vpc-123456789
 
-subnet name/cidr/ids :
+    **subnet name/cidr/ids** :
 
-private-subnet-123 | 10.0.2.0/24 | subnet-123456789
-public-subnet-123 | 10.0.1.0/24 | subnet-123456789
+    private-subnet-123 | 10.0.2.0/24 | subnet-123456789
+    public-subnet-123 | 10.0.1.0/24 | subnet-123456789
 
-route table name/id :
+    **route table name/id** :
 
-my-route-table-123 | rtb-123456789
+    my-route-table-123 | rtb-123456789
 
-internet gateway name/id :
+    **internet gateway name/id** :
 
-vpc02-internet-gateway | igw-123456789
+    vpc02-internet-gateway | igw-123456789
 
-nat name/instance id/state :
+    **nat name/instance id/state** :
 
-NATInstance  | i-123456789 |  running
+    NATInstance  | i-123456789 |  running
 
-security group id :
+    **security group id** :
 
-vpc02SecurityGroup | sg-123456789
+    vpc02SecurityGroup | sg-123456789
 
-key pair name:
+    **key pair name**:
 
-key-pair-123
+    key-pair-123
