@@ -33,9 +33,9 @@ Log and store:
 
 See Example Scheme: (input your own names and IDs in place of 123, 123456789):
 
->**vpc name/id** :
+**vpc name/id** :
 
->my-vpc-123 | vpc-123456789
+my-vpc-123 | vpc-123456789
 
 **subnet name/cidr/ids** :
 
