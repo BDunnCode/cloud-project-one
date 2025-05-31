@@ -4,11 +4,11 @@
 
 1. Install WSL (Windows Subsystem for Linux)
 
-https://learn.microsoft.com/en-us/windows/wsl/install
+[WSL Install Guide] https://learn.microsoft.com/en-us/windows/wsl/install
 
 2. Create an AWS Account 
 
-https://aws.amazon.com/free
+[AWS Free Tier] https://aws.amazon.com/free
 
 3. Create a Key Info Document
 Log and store:
