@@ -2,7 +2,7 @@
 
 ## I. Prerequisites
 
-Install WSL (Windows Subsystem for Linux)
+*Install WSL (Windows Subsystem for Linux)*
 
 [WSL Install Guide](https://learn.microsoft.com/en-us/windows/wsl/install)
 
