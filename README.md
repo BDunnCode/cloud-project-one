@@ -111,7 +111,7 @@ With the subnets created, you’re now ready to add a gateway and route tables.
 - Select the route table -> Subnet Associations -> Edit subnet associations
 - Check the Public-Subnet and save.
 
-## Interacting with your VPC using the Linux CLI
+## 3. Interacting with your VPC using the Linux CLI
 
 Once you have installed the Windows Subsystem for Linux, you should have a command line interface tool that will appear to you as “Ubuntu”  
 
@@ -145,7 +145,7 @@ The CLI should simply ask you to define a username and password.
 *In the Ubuntu CLI*:
 
 - Type “aws configure” 
-- You will be prompted to enter:
+You will be prompted to enter:
 - Your Access Key ID 
 - Secret Key 
 - AWS Region (You should be able to find this in the top right corner of your AWS console) 
