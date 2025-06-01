@@ -67,13 +67,13 @@ See Example Scheme: (input your own names and IDs in place of 123, 123456789):
 Once you’ve installed Windows Subsystem for Linux and created your AWS account, it’s time to sign-in to the AWS console.
 
 ### Create your VPC
-- In the search bar, type “VPC”. Double-click on the service when it pops up.
-- Select “VPC Only” 
-- For the name tag, you can name it whatever you want. I called mine the default “my-vpc-01”
-- For “IPv4 CIDR”, input “10.0.0.0/16” (There are other options, but this will work).
-- No “IPv6 CIDR block”
-- Tenancy “default”
-- No tags are required.
-- Press “Create VPC”
+    - In the search bar, type “VPC”. Double-click on the service when it pops up.
+    - Select “VPC Only” 
+    - For the name tag, you can name it whatever you want. I called mine the default “my-vpc-01”
+    - For “IPv4 CIDR”, input “10.0.0.0/16” (There are other options, but this will work).
+    - No “IPv6 CIDR block”
+    - Tenancy “default”
+    - No tags are required.
+    - Press “Create VPC”
 
-Congratulations, you’ve built your VPC. Now we’ll segment the network using subnets. 
+    Congratulations, you’ve built your VPC. Now we’ll segment the network using subnets. 
