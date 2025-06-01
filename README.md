@@ -103,13 +103,24 @@ With the subnets created, you’re now ready to add a gateway and route tables.
 - Press “Create”  
 
 *Add a route for your public subnet*:
-- In the Route Tables tab, select the route table you just created.
+- In the Route Tables tab, select the route table you just created
 - Select “Routes” -> “Edit routes” -> “Add route” 
 - Add 0.0.0.0 to add your internet gateway
 
 *Attach routing table to your public subnet*:
-- Select the route table -> Subnet Associations -> Edit subnet associations.
+- Select the route table -> Subnet Associations -> Edit subnet associations
 - Check the Public-Subnet and save.
 
+## Interacting with your VPC using the Linux CLI
+
+Once you have installed the Windows Subsystem for Linux, you should have a command line interface tool that will appear to you as “Ubuntu”  
+
+To use it: 
+
+- Type “Ubuntu” in the search bar
+
+- Right click the application and select “Run as administrator”
+
+- You are now ready to begin utilizing the command line interface for scripting and automation. This will dramatically increase the speed and ease with which you can work with your virtual private cloud. 
 
 
