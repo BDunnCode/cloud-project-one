@@ -16,7 +16,9 @@
 
 3. Create a Key Info Document
 Log and store:
-<div style="padding-left:20px">
+
+<div style="padding-left:80px">
+
 - VPC ID/name
 
 - Subnet names, CIDRs, IDs
