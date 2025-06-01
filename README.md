@@ -158,6 +158,10 @@ With the Ubuntu CLI configured, you can now perform all of the steps that you pe
 
 **Create VPC**:
 
+```bash
+aws ec2 create-vpc --cidr-block 10.0.0.0/16 --region us-west-2
+```
+
 **Create a public subnet**:
 
 ```bash
