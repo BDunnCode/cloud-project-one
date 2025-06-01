@@ -160,7 +160,9 @@ With the Ubuntu CLI configured, you can now perform all of the steps that you pe
 
 **Create a public subnet**:
 
- <pre> ```bash aws ec2 describe-instances ``` </pre> 
+```bash 
+    aws ec2 describe-instances 
+``` 
 
 ```aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.1.0/24 --availability-zone us-west-2a```
 
