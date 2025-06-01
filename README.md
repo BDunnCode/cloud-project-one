@@ -232,6 +232,39 @@ A large corporation’s billing department needs to interact with an external pa
 - The internal IP scheme is private and non-routable on the internet.
 - The company wants to limit inbound exposure of their internal network while still enabling outbound communication.
 
+*How NAT Helps*:
+
+**Internal Billing System**:
+
+ The billing department’s application server has a private IP (e.g., 10.20.30.5) on the company’s internal network.
+
+
+**Outbound Request**:
+
+ When the billing system sends API requests to the payment gateway over the internet, the request first goes through a NAT gateway or firewall device at the company’s network edge.
+
+
+**NAT Translation**:
+
+ The NAT gateway replaces the internal private IP (10.20.30.5) with a public IP address assigned to the company (e.g., 198.51.100.10) before forwarding the request to the payment gateway.
+
+
+**Payment Gateway Sees Only the Public IP**:
+
+ The payment gateway’s servers only see requests coming from 198.51.100.10 — the public IP of the company’s NAT device — not the internal IP or any details about the originating billing system.
+
+
+**Security & Privacy**:
+
+This prevents the payment gateway from identifying the exact internal source machine, improving privacy.
+
+It also prevents inbound unsolicited traffic from reaching internal systems since NAT only allows established connections.
+
+**Return Traffic**:
+
+ Responses from the payment gateway go back to the NAT device at 198.51.100.10, which translates the IP back to the internal billing system’s IP, ensuring seamless communication.
+
+
 
 
 
