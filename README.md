@@ -211,7 +211,7 @@ aws ec2 create-security-group --group-name MySecurityGroup --description "Allow 
 ```
 
 ```bash
-	aws ec2 authorize-security-group-ingress --group-id sg-xxxxxx --protocol tcp --port 22 --cidr 0.0.0.0/0
+aws ec2 authorize-security-group-ingress --group-id sg-xxxxxx --protocol tcp --port 22 --cidr 0.0.0.0/0
 ```
 
 ## 4. Adding EC2 instances and NAT functionality to your VPC
@@ -263,6 +263,39 @@ It also prevents inbound unsolicited traffic from reaching internal systems sinc
 **Return Traffic**:
 
  Responses from the payment gateway go back to the NAT device at 198.51.100.10, which translates the IP back to the internal billing system’s IP, ensuring seamless communication.
+
+## Building the NAT Instance
+
+AWS doesn’t maintain official NAT instance AMIs anymore, so you have to configure one manually using a traditional EC2 instance.
+
+*Find an AMI*:
+
+```bash
+aws ec2 describe-images \
+  --owners amazon \
+  --filters "Name=name,Values=amzn2-ami-hvm-*-x86_64-gp2" "Name=state,Values=available" \
+  --query 'Images[*].[ImageId,Name]' --output table
+```
+
+Copy the id of the top most AMI, this is the latest version
+
+*Launch the Instance*:
+
+You’ll need various information about the components of your VPC so grab your file from the prerequisites 
+
+```bash
+aws ec2 run-instances 
+  --image-id ami-0abcdef1234567890 \
+  --count 1 \
+  --instance-type t2.micro \
+  --key-name my-key-pair \
+  --subnet-id subnet-xxxxxxxx \
+  --associate-public-ip-address \
+  --security-group-ids sg-xxxxxxxx \
+  --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=NATInstance}]'
+```
+
+Be sure to fill in the key pair, subnet id, and security group with your specific credentials
 
 
 
