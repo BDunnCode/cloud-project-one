@@ -160,19 +160,24 @@ With the Ubuntu CLI configured, you can now perform all of the steps that you pe
 
 **Create a public subnet**:
 
-```bash 
-    aws ec2 describe-instances 
-``` 
-
-```aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.1.0/24 --availability-zone us-west-2a```
+```bash
+aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.1.0/24 --availability-zone us-west-2a
+```
 
 **Create a private subnet**:
-```aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.2.0/24 --availability-zone us-west-2b```
+
+```bash
+aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.2.0/24 --availability-zone us-west-2b
+```
 
 **Create and Attach an Internet Gateway**:
 
-```aws ec2 create-internet-gateway```
-```aws ec2 attach-internet-gateway --vpc-id vpc-xxxxxx --internet-gateway-id igw-xxxxxx```
+```bash
+aws ec2 create-internet-gateway```
+
+```bash
+aws ec2 attach-internet-gateway --vpc-id vpc-xxxxxx --internet-gateway-id igw-xxxxxx
+```
 
 **Create a route table for the public subnet**:
 
