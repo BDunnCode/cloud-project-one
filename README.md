@@ -14,7 +14,7 @@
 
     (You’re going to be making various commands that will require specific identifiers, and you’ll want this information handy. If you’re comfortable navigating the AWS console by yourself that can work, but the fastest way is to simply aggregate the information and stick it all somewhere that you can easily grab it from, e.g.)
 
-3. Create a Key Info Document
+3. Create an easily accessed document with this information:
 - Log and store:
     - VPC ID/name
     - Subnet names, CIDRs, IDs
