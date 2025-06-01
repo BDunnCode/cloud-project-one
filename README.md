@@ -71,17 +71,17 @@ Once you’ve installed Windows Subsystem for Linux and created your AWS account
 
 Congratulations, you’ve built your VPC. Now we’ll segment the network using subnets. 
 
-###Create Subnets
+### Create Subnets
 
-Create Subnets
-Subnet 1:
+*Subnet 1*:
 Subnet Name: public-subnet-01 (or whatever matches your naming scheme)
 Availability Zone: select any from the list
 CIDR Block: 10.0.1.0/24
 Left-click “Create Subnet”
 
-Subnet 2: 
+*Subnet 2*: 
 Subnet Name: private-subnet-01 (or whatever matches your naming scheme)
 Availability Zone: select any from the list
 CIDR Block: 10.0.2.0/24
 Left-click “Create Subnet”
+
