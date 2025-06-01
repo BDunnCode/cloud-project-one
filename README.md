@@ -173,7 +173,8 @@ aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.2.0/24 --availabilit
 **Create and Attach an Internet Gateway**:
 
 ```bash
-aws ec2 create-internet-gateway```
+aws ec2 create-internet-gateway
+```
 
 ```bash
 aws ec2 attach-internet-gateway --vpc-id vpc-xxxxxx --internet-gateway-id igw-xxxxxx
