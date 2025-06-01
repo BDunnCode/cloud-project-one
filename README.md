@@ -17,8 +17,6 @@
 3. Create a Key Info Document
 Log and store:
 
-<div style="padding-left:80px">
-
 - VPC ID/name
 
 - Subnet names, CIDRs, IDs
@@ -32,8 +30,6 @@ Log and store:
 - Security Group ID
 
 - Key pair name
-
-</div>
 
 See Example Scheme: (input your own names and IDs in place of 123, 123456789):
 
