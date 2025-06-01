@@ -182,11 +182,20 @@ aws ec2 attach-internet-gateway --vpc-id vpc-xxxxxx --internet-gateway-id igw-xx
 
 **Create a route table for the public subnet**:
 
-```aws ec2 create-route-table --vpc-id vpc-xxxxxx```
+
+```bash
+aws ec2 create-route-table --vpc-id vpc-xxxxxx
+```
+
 
 **Add a route for the public subnet**:
 
-```aws ec2 create-route --route-table-id rtb-xxxxxx --destination-cidr-block 0.0.0.0/0 --gateway-id igw-xxxxxx```
+```bash
+aws ec2 create-route --route-table-id rtb-xxxxxx --destination-cidr-block 0.0.0.0/0 --gateway-id igw-xxxxxx
+```
+
+
+
 
 You won’t need to do these for this project, however, because you’ve already set them up. Now we will make actual changes to the VPC using the CLI.
 
