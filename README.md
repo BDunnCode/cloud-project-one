@@ -152,7 +152,7 @@ You will be prompted to enter:
 - AWS Region (You should be able to find this in the top right corner of your AWS console) 
 - Default Output Format (Use “json”) 
 
-## 4. Interacting with AWS using the CLI
+### Interacting with AWS using the CLI
 
 With the Ubuntu CLI configured, you can now perform all of the steps that you performed under the “Building your VPC” section using commands, ex:
 
@@ -214,5 +214,24 @@ aws ec2 create-security-group --group-name MySecurityGroup --description "Allow 
 	aws ec2 authorize-security-group-ingress --group-id sg-xxxxxx --protocol tcp --port 22 --cidr 0.0.0.0/0
 ```
 
-## 5. Adding EC2 instances and NAT functionality to your VPC
+## 4. Adding EC2 instances and NAT functionality to your VPC
+
+Now we’ll add Network Address Translation functionality to our VPC, all while in the free tier, by using a free EC2 instance. By using Network Address Translation, we allow sensitive and private parts of the network to be able to interact with the internet without being identified by its real IP address. 
+
+*Here’s why we’re doing this*:
+
+### Example: Billing Department Accessing a Third-Party Payment Gateway
+
+*Business Context*:
+
+A large corporation’s billing department needs to interact with an external payment gateway API to verify customer payment status and process transactions.
+
+*Challenge*:
+- The billing department’s internal systems contain sensitive customer data.
+- For security and compliance, the company does not want the external payment gateway to see the internal IP addresses or direct source of the requests.
+- The internal IP scheme is private and non-routable on the internet.
+- The company wants to limit inbound exposure of their internal network while still enabling outbound communication.
+
+
+
 
