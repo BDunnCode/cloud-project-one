@@ -73,7 +73,7 @@ Congratulations, you’ve built your VPC. Now we’ll segment the network using 
 
 ### Create Subnets
 
-*Subnet 1*:
+*Subnet 1*:  
 
 **Subnet Name**: public-subnet-01 (or whatever matches your naming scheme)  
 **Availability Zone**: select any from the list  
@@ -86,4 +86,30 @@ Left-click “Create Subnet”
 **Availability Zone**: select any from the list  
 **CIDR Block**: 10.0.2.0/24  
 Left-click “Create Subnet”  
+
+With the subnets created, you’re now ready to add route tables.  
+
+*Create an Internet Gateway*
+- Navigate to Internet Gateways
+- Select “Create Internet Gateway”
+- Name the gateway based on your naming scheme
+- Attach the gateway to your VPC
+
+*Create Route Tables*
+Creating the Table:
+Select “Route tables” in the navigation bar
+Press “Create Route Table”
+Name it “my-route-table-01” (or whatever matches your naming scheme)
+Press “Create”
+
+		Add a route for your public subnet:
+In the Route Tables tab, select the route table you just created.
+Select “Routes” -> “Edit routes” -> “Add route” 
+Add 0.0.0.0 to add your internet gateway
+
+	Attach routing table to your public subnet:
+Select the route table -> Subnet Associations -> Edit subnet associations.
+Check the Public-Subnet and save.
+
+
 
