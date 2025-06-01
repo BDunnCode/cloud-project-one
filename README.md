@@ -4,9 +4,10 @@
 
 1. Install WSL (Windows Subsystem for Linux)
 
-[WSL Install Guide](https://learn.microsoft.com/en-us/windows/wsl/install)
+> [WSL Install Guide](https://learn.microsoft.com/en-us/windows/wsl/install)
 
-(You will have to attach a credit card, even though you’re going to stick to free services. Using Search / AI to verify which services are free and which are paid can be your friend).
+> (You will have to attach a credit card, even though you’re going to stick to free services. Using
+> Search / AI to verify which services are free and which are paid can be your friend).
 
 2. Create an AWS Account 
 
