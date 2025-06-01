@@ -33,34 +33,34 @@ Log and store:
 
 See Example Scheme: (input your own names and IDs in place of 123, 123456789):
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**vpc name/id** :
+**vpc name/id** :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my-vpc-123 | vpc-123456789
+my-vpc-123 | vpc-123456789
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**subnet name/cidr/ids** :
+**subnet name/cidr/ids** :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private-subnet-123 | 10.0.2.0/24 | subnet-123456789
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public-subnet-123 | 10.0.1.0/24 | subnet-123456789
+private-subnet-123 | 10.0.2.0/24 | subnet-123456789
+public-subnet-123 | 10.0.1.0/24 | subnet-123456789
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**route table name/id** :
+**route table name/id** :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my-route-table-123 | rtb-123456789
+my-route-table-123 | rtb-123456789
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**internet gateway name/id** :
+**internet gateway name/id** :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vpc02-internet-gateway | igw-123456789
+vpc02-internet-gateway | igw-123456789
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**nat name/instance id/state** :
+**nat name/instance id/state** :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NATInstance  | i-123456789 |  running
+NATInstance  | i-123456789 |  running
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**security group id** :
+**security group id** :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vpc02SecurityGroup | sg-123456789
+vpc02SecurityGroup | sg-123456789
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**key pair name**:
+**key pair name**:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key-pair-123
+key-pair-123
 
 ## 2. Building your VPC Components In the AWS Console
 
