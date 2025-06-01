@@ -118,9 +118,7 @@ Once you have installed the Windows Subsystem for Linux, you should have a comma
 To use it: 
 
 - Type “Ubuntu” in the search bar
-
 - Right click the application and select “Run as administrator”
-
 - You are now ready to begin utilizing the command line interface for scripting and automation. This will dramatically increase the speed and ease with which you can work with your virtual private cloud. 
 
 
