@@ -158,27 +158,27 @@ With the Ubuntu CLI configured, you can now perform all of the steps that you pe
 
 **Create VPC**:
 
-`aws ec2 create-vpc --cidr-block 10.0.0.0/16 --region us-west-2`
+```aws ec2 create-vpc --cidr-block 10.0.0.0/16 --region us-west-2```
 
 **Create a public subnet**:
 
-`aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.1.0/24 --availability-zone us-west-2a`
+```aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.1.0/24 --availability-zone us-west-2a```
 
 **Create a private subnet**:
-`aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.2.0/24 --availability-zone us-west-2b`
+```aws ec2 create-subnet --vpc-id vpc-xxxxxx --cidr-block 10.0.2.0/24 --availability-zone us-west-2b```
 
 **Create and Attach an Internet Gateway**:
 
-`aws ec2 create-internet-gateway`
-`aws ec2 attach-internet-gateway --vpc-id vpc-xxxxxx --internet-gateway-id igw-xxxxxx`
+```aws ec2 create-internet-gateway```
+```aws ec2 attach-internet-gateway --vpc-id vpc-xxxxxx --internet-gateway-id igw-xxxxxx```
 
 **Create a route table for the public subnet**:
 
-`aws ec2 create-route-table --vpc-id vpc-xxxxxx`
+```aws ec2 create-route-table --vpc-id vpc-xxxxxx```
 
 **Add a route for the public subnet**:
 
-`aws ec2 create-route --route-table-id rtb-xxxxxx --destination-cidr-block 0.0.0.0/0 --gateway-id igw-xxxxxx`
+```aws ec2 create-route --route-table-id rtb-xxxxxx --destination-cidr-block 0.0.0.0/0 --gateway-id igw-xxxxxx```
 
 You won’t need to do these for this project, however, because you’ve already set them up. Now we will make actual changes to the VPC using the CLI.
 
