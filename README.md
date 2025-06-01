@@ -17,19 +17,19 @@
 3. Create a Key Info Document
 Log and store:
 
-&nbsp;&nbsp;&nbsp;&nbsp;- VPC ID/name
+- &nbsp;&nbsp;&nbsp;&nbsp; VPC ID/name
 
-&nbsp;&nbsp;&nbsp;&nbsp;- Subnet names, CIDRs, IDs
+- &nbsp;&nbsp;&nbsp;&nbsp; Subnet names, CIDRs, IDs
 
-&nbsp;&nbsp;&nbsp;&nbsp;- Route Table ID
+- &nbsp;&nbsp;&nbsp;&nbsp; Route Table ID
 
-&nbsp;&nbsp;&nbsp;&nbsp;- Internet Gateway ID
+- &nbsp;&nbsp;&nbsp;&nbsp; Internet Gateway ID
 
-&nbsp;&nbsp;&nbsp;&nbsp;- NAT instance ID
+- &nbsp;&nbsp;&nbsp;&nbsp; NAT instance ID
 
-&nbsp;&nbsp;&nbsp;&nbsp;- Security Group ID
+- &nbsp;&nbsp;&nbsp;&nbsp; Security Group ID
 
-&nbsp;&nbsp;&nbsp;&nbsp;- Key pair name
+- &nbsp;&nbsp;&nbsp;&nbsp; Key pair name
 
 See Example Scheme: (input your own names and IDs in place of 123, 123456789):
 
