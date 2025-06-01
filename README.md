@@ -144,7 +144,8 @@ The CLI should simply ask you to define a username and password.
 
 *In the Ubuntu CLI*:
 
-- Type “aws configure” 
+- Type “aws configure”  
+
 You will be prompted to enter:
 - Your Access Key ID 
 - Secret Key 
