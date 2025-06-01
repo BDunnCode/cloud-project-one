@@ -115,10 +115,29 @@ With the subnets created, you’re now ready to add a gateway and route tables.
 
 Once you have installed the Windows Subsystem for Linux, you should have a command line interface tool that will appear to you as “Ubuntu”  
 
-To use it: 
+## Prerequisites
+
+### Start the CLI  
 
 - Type “Ubuntu” in the search bar
 - Right click the application and select “Run as administrator”
 - You are now ready to begin utilizing the command line interface for scripting and automation. This will dramatically increase the speed and ease with which you can work with your virtual private cloud. 
 
+### Create your default Linux User
 
+The CLI should simply ask you to define a username and password.
+
+### Create an Access Key Pair within your AWS account using the AWS console
+
+- Sign in to the AWS Management Console as an administrator
+- Search “IAM” and left-click to select it
+- In the left navigation pane, click on “Users.”
+- Click on the username of the IAM user you want to create keys for.
+- Go to the “Security credentials” tab.
+- Scroll down to the “Access keys” section.
+- Click “Create access key.”
+- Choose the use case (e.g., "Command Line Interface (CLI)", etc.) and click Next.
+- On the final screen, click “Create access key.”
+- Copy or download the Access Key ID and Secret Access Key — you’ll only see the secret key once.
+
+### Configuring your CLI
