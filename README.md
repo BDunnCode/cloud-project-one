@@ -264,7 +264,7 @@ It also prevents inbound unsolicited traffic from reaching internal systems sinc
 
  Responses from the payment gateway go back to the NAT device at 198.51.100.10, which translates the IP back to the internal billing system’s IP, ensuring seamless communication.
 
-## Building the NAT Instance
+### Building the NAT Instance
 
 AWS doesn’t maintain official NAT instance AMIs anymore, so you have to configure one manually using a traditional EC2 instance.
 
@@ -279,7 +279,7 @@ aws ec2 describe-images \
 
 Copy the id of the top most AMI, this is the latest version
 
-*Launch the Instance*:
+*Launch the NAT Instance*:
 
 You’ll need various information about the components of your VPC so grab your file from the prerequisites 
 
@@ -297,7 +297,48 @@ aws ec2 run-instances
 
 Be sure to fill in the key pair, subnet id, and security group with your specific credentials
 
+*Disable Source Destination Check*:
 
+```bash
+aws ec2 modify-instance-attribute \
+  --instance-id i-xxxxxxxxxxxx \
+  --no-source-dest-check
+```
+This allows traffic to flow through the instance even if it is not from or addressed to its IP
 
+### Connect to the Instance and Setup IP Forwarding
 
+*Get the public IP of the NAT Instance*:
 
+```bash
+aws ec2 describe-instances \
+  --instance-ids i-0123456789abcdef0 \
+  --query "Reservations[0].Instances[0].PublicIpAddress" \
+  --output text
+```
+*Make sure your key file has the proper permissions*:
+
+```bash
+chmod 400 /path/to/your-key.pem
+```
+
+*SSH into the instance*:
+
+```bash
+ssh -i /path/to/your-key.pem ec2-user@<public-ip>
+```
+
+Be sure to put the correct full path for the key file, and swap in the public IP for the NAT instance
+
+*Setup IP Forwarding Permanently*:
+
+```bash
+sudo sysctl -w net.ipv4.ip_forward=1
+```
+
+```bash
+echo "net.ipv4.ip_forward = 1" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+```
+
+### Enable NAT masquerading with IPTables
