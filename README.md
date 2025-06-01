@@ -341,4 +341,29 @@ echo "net.ipv4.ip_forward = 1" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 ```
 
-### Enable NAT masquerading with IPTables
+*Enable NAT masquerading with IPTables*:
+
+Input the following code:
+
+```bash
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```
+
+```bash
+sudo yum install iptables-services -y
+sudo service iptables save
+sudo systemctl enable iptables
+```
+### Update the Private Subnet's Route Table
+
+Now we’ll route outbound internet traffic (0.0.0.0/0) to the NAT instance’s private IP (not public IP).
+
+```bash
+aws ec2 create-route \
+  --route-table-id rtb-xxxxxxxx \
+  --destination-cidr-block 0.0.0.0/0 \
+  --instance-id i-xxxxxxxxxxxx
+```
+
+And.. that will do it! Those steps will get you a Virtual Private Cloud complete with Network Address
+Translation functionality.
