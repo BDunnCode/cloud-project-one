@@ -141,3 +141,12 @@ The CLI should simply ask you to define a username and password.
 - Copy or download the Access Key ID and Secret Access Key — you’ll only see the secret key once.
 
 ### Configuring your CLI
+
+*In the Ubuntu CLI*:
+
+- Type “aws configure” 
+- You will be prompted to enter:
+- Your Access Key ID 
+- Secret Key 
+- AWS Region (You should be able to find this in the top right corner of your AWS console) 
+- Default Output Format (Use “json”) 
