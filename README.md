@@ -152,7 +152,7 @@ You will be prompted to enter:
 - AWS Region (You should be able to find this in the top right corner of your AWS console) 
 - Default Output Format (Use “json”) 
 
-## Interacting with AWS using the CLI
+## 4. Interacting with AWS using the CLI
 
 With the Ubuntu CLI configured, you can now perform all of the steps that you performed under the “Building your VPC” section using commands, ex:
 
@@ -198,9 +198,21 @@ aws ec2 create-route-table --vpc-id vpc-xxxxxx
 aws ec2 create-route --route-table-id rtb-xxxxxx --destination-cidr-block 0.0.0.0/0 --gateway-id igw-xxxxxx
 ```
 
-
-
-
 You won’t need to do these for this project, however, because you’ve already set them up. Now we will make actual changes to the VPC using the CLI.
 
+## Adding to the VPC using the CLI
+
+We’ll now add a Security Group (AWS version of a virtual firewall) to our VPC.
+
+*Input (into your CLI):*
+
+```bash
+aws ec2 create-security-group --group-name MySecurityGroup --description "Allow SSH" --vpc-id vpc-xxxxxx
+```
+
+```bash
+	aws ec2 authorize-security-group-ingress --group-id sg-xxxxxx --protocol tcp --port 22 --cidr 0.0.0.0/0
+```
+
+## 5. Adding EC2 instances and NAT functionality to your VPC
 
