@@ -151,3 +151,11 @@ You will be prompted to enter:
 - Secret Key 
 - AWS Region (You should be able to find this in the top right corner of your AWS console) 
 - Default Output Format (Use “json”) 
+
+## Interacting with AWS using the CLI
+
+With the Ubuntu CLI configured, you can now perform all of the steps that you performed under the “Building your VPC” section using commands, ex:
+
+**Create VPC**:
+
+`aws ec2 create-vpc --cidr-block 10.0.0.0/16 --region us-west-2`
