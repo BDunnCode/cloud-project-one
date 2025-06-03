@@ -22,7 +22,7 @@ This project demonstrates a VPC setup from scratch and includes the following se
 
 ![VPC Text Diagram](vpc-text-diagram.png)
 
-# ✍️ Design Rationale & 💰 Cost Savings
+# ✍️ Design Rationale and 💰 Cost Savings
 
 The intent with this project was to immediately jump in and create a functioning VPC that would resemble a professional network.
 
@@ -414,3 +414,75 @@ And.. that will do it! Those steps will get you a Virtual Private Cloud complete
 Translation functionality.
 
 # 🤔 Post-exercise Reflections
+
+## Setting up the VPC is really easy
+
+Setting up the VPC manually for the first time was surprisingly quick and straightforward. The entire process—from initial setup to gaining a working SSH connection into the EC2 instance was really quite easy. Most of the challenge was:
+
+- Writing down and documenting the process
+- Learning the draw.io tool and creating a network diagram
+- Learning the quirks of markdown and getting a satisying presentation
+
+## LLMs work better than expected, but with unexpected shortcomings
+
+I worked with an LLM which provided valuable support, it also introduced several challenges:
+
+- Keeping track of the many back-and-forth prompts and instructions. Especially in a larger, longer project requiring multiple sessions. The communications are long and somewhat hard to revisit as a reference because it can lag and take a while to sift through and find what you're looking for.
+- The LLM lags quite often
+- The LLM confidently hallucinates, lies, or misleads fairly often
+- If you lean on it too much, you won't understand what's actually going on 
+
+## There's art to the diagram
+
+To make the diagram readable and correct basically requires omitting certain information, even
+with a fairly simple setup like this one, for a few reasons:
+
+- Space is very valuable in the visual
+  - Firewalls that existed, but weren't doing anything were entirely left out in the visual for that
+    reason.
+- Giving a clean visual path of multiple traffic flows is extremely daunting and probably not
+something that can be exact most times due to readability concerns.
+
+## Skills Honed
+
+- Managing billing and budget alerts
+- Building a VPC from scratch using the AWS CLI
+- Configuring route tables, subnets, internet gateways, and NAT instances
+- Securing resources using security groups
+- Visualizing and documenting cloud architectures effectively
+
+## Documentation
+
+90% or more of this project time was really spent on documentation. This seems to really be the place where there's a large opening for growth in profiency.
+
+If you know what to ask for an LLM can spoon feed you commands quite well, but while it will TRY to 
+generate a diagram or documentation for you, it almost certainly won't be what you want. In fact, I found 
+it to be so far from what I wanted it was more effective to do all documenting and diagrams from scratch
+myself. 
+
+Technical documentation seems to wind up being different enough from essay-style writing that a lot of 
+formatting concepts I took for granted don't apply well. You can run into insufficient amounts of headers
+for sub-sections, or find that..
+
+### Markdown
+
+Markdown get it's own special subsection because it gave me loads of problems. Markdown is the
+standard language used in README files. I had already written out a rather long document in Google Docs
+and figured I could copy that offer to the README very quickly. Very wrong.
+
+Markdown has odd quirks like:
+
+- Tabs will create a code box around content. The code box is great, but tabs for indenting and formatting
+are standard so I had to totally rethink how to format everything. A lot of content simply isn't indented
+in the README file for this reason.
+
+- There's not that many different headers. If you've got a lot of sub-sections you quickly run out of 
+headers and have to get creative. I used regularly-sized italic and bold text as ways to compensate for
+this issue quite a bit.
+
+- So different from other text editors. With markdown being so different from Google Docs, I almost had to entirely rewrite everything, in fact 
+figuring out how to reformat may have even taken longer than the original writing. It shows how valuable automated migration tools / migration assistance 
+for large projects and businesses could be.
+
+
+
