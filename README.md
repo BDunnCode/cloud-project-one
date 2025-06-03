@@ -22,7 +22,26 @@ This project demonstrates a VPC setup from scratch and includes the following se
 
 ![VPC Text Diagram](vpc-text-diagram.png)
 
-# ✍️ Design Rationale
+# ✍️ Design Rationale & 💰 Cost Savings
+
+The intent with this project was to immediately jump in and create a functioning VPC that would resemble a professional network.
+
+## Subnetting / NAT Instance 
+
+The VPC was divided into a private and public subnet in order to emulate a modern, professional networking environment. 
+
+The NAT Instance resides on the public while accepting traffic from EC2 instances on the private subnet and translating the IP addresses on what would be potentially sensitive host units (data, financials) before allowing them to communicate with the internet.
+
+## t2.micro Instances 
+
+t2.micro instances were used exclusively allowing free hands-on usage of VM instances. Both for the host units and NAT. 
+
+The NAT instance required manual configuration, and was used instead of the standard NAT Gateway, an AWS managed service that is a paid service.
+
+## Billing / Budget
+
+Billing and Cost Management and Budget tools were utilized to avoid and monitor for any charges due to potential human error.
+
 
 # 🔧 VPC Setup
 
