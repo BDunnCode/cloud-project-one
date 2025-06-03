@@ -18,7 +18,7 @@ This project demonstrates a VPC setup from scratch and includes the following se
 
 # 📜 Network Diagrams
 
-![VPC Visual Diagram](diagrams/vpc-visual-diagram.png)
+![VPC Visual Diagram](vpc-visual-diagram.png)
 
 ![VPC Text Diagram](vpc-text-diagram.png)
 
