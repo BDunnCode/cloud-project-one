@@ -432,7 +432,7 @@ I worked with an LLM which provided valuable support, it also introduced several
 - The LLM confidently hallucinates, lies, or misleads fairly often
 - If you lean on it too much, you won't understand what's actually going on 
 
-## There's art to the diagram
+## There's an art to the diagram
 
 To make the diagram readable and correct basically requires omitting certain information, even
 with a fairly simple setup like this one, for a few reasons:
@@ -480,7 +480,7 @@ in the README file for this reason.
 headers and have to get creative. I used regularly-sized italic and bold text as ways to compensate for
 this issue quite a bit.
 
-- So different from other text editors. With markdown being so different from Google Docs, I almost had to entirely rewrite everything, in fact 
+- Being so different from other text editors. With markdown being so different from Google Docs, I almost had to entirely rewrite everything, in fact 
 figuring out how to reformat may have even taken longer than the original writing. It shows how valuable automated migration tools / migration assistance 
 for large projects and businesses could be.
 
