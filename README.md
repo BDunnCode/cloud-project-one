@@ -1,3 +1,29 @@
+# 📦 Project Overview
+
+This project demonstrates a VPC setup from scratch and includes the following sections:
+
+- Project Overview
+- Tools Used
+- Network Diagrams
+- Design Rationale
+- VPC Setup
+- Post-exercise reflection
+
+# 🛠️ Tools Used
+- AWS Console
+- AWS CLI
+- Git
+- Visual Studio Code
+- Draw.io
+
+# 📜 Network Diagrams
+
+![VPC Visual Diagram](diagrams/vpc-visual-diagram.png)
+
+![VPC Text Diagram](vpc-text-diagram.png)
+
+# ✍️ Design Rationale
+
 # 🔧 VPC Setup
 
 ## I. Prerequisites
@@ -367,3 +393,5 @@ aws ec2 create-route \
 
 And.. that will do it! Those steps will get you a Virtual Private Cloud complete with Network Address
 Translation functionality.
+
+# 🤔 Post-exercise Reflections
