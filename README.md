@@ -12,9 +12,12 @@ This project demonstrates a VPC setup from scratch and includes the following se
 # 🛠️ Tools Used
 - AWS Console
 - AWS CLI
-- Git
+- Git / Github
 - Visual Studio Code
 - Draw.io
+- WSL (Window Subsystem for Linux)
+- WSL Ubuntu Bash Shell 
+
 
 # 📜 Network Diagrams
 
