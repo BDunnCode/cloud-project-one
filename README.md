@@ -487,5 +487,17 @@ this issue quite a bit.
 figuring out how to reformat may have even taken longer than the original writing. It shows how valuable automated migration tools / migration assistance 
 for large projects and businesses could be.
 
+# 🧭 Changes in Approach
 
+Skills and Understanding > Software > Documentation
+
+Decrease time spent on documentation through a combination of streamlining and clarity of the values above. 
+
+Streamline with: 
+
+- A standardized schema for documentation, deviating as needed.  
+
+- Things like tools and prerequisites may be similar from project-to-project, and they be pasted from one project to another and then trimmed. 
+
+- Full written setup process from project-to-project isn't worth doing. Being able to fluently demonstrate the steps in a video demo, however, may be worth exploring.
 
