@@ -1,4 +1,4 @@
-# 📦 Project Overview
+# 🌄 Project Overview
 
 This project demonstrates a VPC setup from scratch and includes the following sections:
 
@@ -30,13 +30,13 @@ This project demonstrates a VPC setup from scratch and includes the following se
   - A linux environment nested in Windows 
 
 
-# 📜 Network Diagrams
+# 📜 Diagrams
 
 ![VPC Visual Diagram](vpc-visual-diagram.png)
 
 ![VPC Text Diagram](vpc-text-diagram.png)
 
-# ✍️ Design Rationale and 💰 Cost Savings
+# 🏗️ Design Rationale
 
 The intent with this project was to immediately jump in and create a functioning VPC that would resemble a professional network. This was all done while remaining in the AWS free tier.
 
@@ -57,7 +57,7 @@ The NAT instance required manual configuration, and was used instead of the stan
 Billing and Cost Management and Budget tools were utilized to avoid and monitor for any charges due to potential human error.
 
 
-# 🔧 VPC Setup
+# 🔧 Setup
 
 ## I. Prerequisites
 
