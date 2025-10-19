@@ -9,14 +9,25 @@ This project demonstrates a VPC setup from scratch and includes the following se
 - VPC Setup
 - Post-exercise reflection
 
-# 🛠️ Tools Used
+# ⚙️ Tools & Technologies
+
 - AWS Console
+  - GUI for simple interactions with AWS
+
 - AWS CLI
+  - Granular AWS interactions via terminal
+
 - Git / Github
+  - Local and online version control and repository
+
 - Visual Studio Code
+  - Text and code editing
+
 - Draw.io
+  - Online drawing and diagramming tool
+
 - WSL (Window Subsystem for Linux)
-- WSL Ubuntu Bash Shell 
+  - A linux environment nested in Windows 
 
 
 # 📜 Network Diagrams
@@ -27,7 +38,7 @@ This project demonstrates a VPC setup from scratch and includes the following se
 
 # ✍️ Design Rationale and 💰 Cost Savings
 
-The intent with this project was to immediately jump in and create a functioning VPC that would resemble a professional network.
+The intent with this project was to immediately jump in and create a functioning VPC that would resemble a professional network. This was all done while remaining in the AWS free tier.
 
 ## Subnetting / NAT Instance 
 
